@@ -1,0 +1,30 @@
+tree,structure where the corals are growing ,,,,,,,,,,,
+treatment ,combination of origin + culture,,,,,,,,,,,
+origin,"area from where the coral fragments were harvested (subtidal - ""sub"" or intertidal - ""int"")",,,,,,,,,,,
+culture,"area where the coral fragments were placed and are growing (subtidal - ""sub"" or intertidal - ""int"")",,,,,,,,,,,
+stressed,"wether the coral fragments have been subjected to thermal stress (""yes"") or not (""no"")",,,,,,,,,,,
+serie,"wether the coral fragments started growing in the beggining of the experiment (""original"") or are substitutes of corals that died (""replacement"")",,,,,,,,,,,
+,,,,,,,,,,,,
+In combination: ,,,,,,,,,,,,
+GROWTH DATA,,,,,,,,,,,SURVIVAL DATA,
+cx,"coral fragment number, where x can be 1-8",,,,,,,,,,cx,"coral fragment number, where x can be 1-8"
+L0,max length at october 2019 (beggining of experiment),,,,,,,,,,S0,% of living coral at october 2019 (beggining of experiment)
+W1,max width at october 2019,,,,,,,,,,S1,% of living coral at december 2019 
+W2,perpendicular width at october 2019,,,,,,,,,,S3,% of living coral at march 2020
+L1 ,max length at december 2019,,,,,,,,,,cxoct-dec,Survival rate per coral fragment between october and december 2019
+W11,max width at december 2019,,,,,,,,,,cxdec-mar,Survival rate per coral fragment between october 2019 and march 2020
+W21,perpendicular width at december 2019,,,,,,,,,,cxoct-mar,Survival rate per coral fragment between december 2019 and march 2021
+L3,max length at march 2020,,,,,,,,,,,
+W13,max width at march 2020,,,,,,,,,,,
+W23,perpendicular width at march 2020,,,,,,,,,,,
+EV0,ecological volume at october 2019,,,,,,,,,,,
+EV1,ecological volume at december 2019,,,,,,,,,,,
+EV3,ecological volume at march 2020,,,,,,,,,,,
+cxoct-dec,Specific Growth Rate per day (SGR/d) per coral fragment between october and december 2019,,,,,,,,,,,
+cxdec-mar,SGR/d per coral fragment between december 2019 and march 2020,,,,,,,,,,,
+cxoct-mar,SGR/d per coral fragment between october 2019 and march 2020,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+Growth measured in cm ,,,,,,,,,,,,
+Ecological Volume calculated in cm^3,,,,,,,,,,,,
+Survival measured in %,,,,,,,,,,,,
