@@ -1,6 +1,6 @@
 ### setup
-rm(list=ls())
-setwd("C:/Users/Lula/Desktop/Reefolution/R")
+rm(list=ls()) # Clear workspace
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) #Set directory at current (make sure file is saved locally)
 
 ### packages
 install.packages("car")
@@ -12,6 +12,7 @@ library(car)
 library(dplyr)
 library(Rmisc) 
 library(ggplot2)
+library(agricolae) # Post hoc letters
 
 ##### GROWTH #####
 
@@ -56,6 +57,9 @@ shapiro.test(SGR)
 leveneTest(SGR~treatment,data=octdec)
 
 ### ANOVA
+##library(nlme) # gls
+##aov <- gls(SGR ~ treatment, data = octdec, weights = varIdent(form = ~1 | treatment))
+
 aov<-aov(SGR~treatment, data=octdec)
 summary(aov)
 
@@ -63,6 +67,7 @@ plot(aov, 1)
 plot(aov, 2)
 
 TukeyHSD(x=aov,"treatment",conf.level = 0.95)
+HSD.test(aov(SGR~treatment, data=octdec), trt = c("treatment"), group = T)$groups
 
 ### bar graphs
 od <-summarySE(octdec, measurevar="SGR",groupvars=c("treatment","treatment"),na.rm = TRUE)
@@ -112,6 +117,7 @@ plot(aov1, 1)
 plot(aov1, 2)
 
 TukeyHSD(x=aov1,"treatment",conf.level = 0.95)
+HSD.test(aov(SGR~treatment, data=decmar), trt = c("treatment"), group = T)$groups
 
 ### bar graphs
 dm <-summarySE(decmar, measurevar="SGR",groupvars=c("treatment","treatment"),na.rm = TRUE)
@@ -161,6 +167,7 @@ plot(aov2, 1)
 plot(aov2, 2)
 
 TukeyHSD(x=aov2,"treatment",conf.level = 0.95)
+HSD.test(aov(SGR~treatment, data=octmar), trt = c("treatment"), group = T)$groups
 
 ### bar graphs
 om<-summarySE(octmar, measurevar="SGR",groupvars=c("treatment","treatment"),na.rm = TRUE)
